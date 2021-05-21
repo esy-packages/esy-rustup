@@ -22,15 +22,9 @@
     },
     "build": [
       [
-        "./rustup-init.sh",
-        "-y",
-        "--no-modify-path",
-        "--default-toolchain",
-        "1.44",
-        "--profile",
-        "minimal",
-        "#{os == 'windows' ? '--default-host' : ''}",
-        "#{os == 'windows' ? 'x86_64-pc-windows-gnu' : ''}"
+        "sh",
+        "-c",
+        "./rustup-init.sh -y --no-modify-path --default-toolchain 1.44 --profile minimal #{os == 'windows' ? '--default-hostx86_64-pc-windows-gnu' : ''}"
       ]
     ]
   }
