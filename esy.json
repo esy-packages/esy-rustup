@@ -24,7 +24,7 @@
       [
         "sh",
         "-c",
-        "./rustup-init.sh -y --no-modify-path --default-toolchain 1.44 --profile minimal #{os == 'windows' ? '--default-hostx86_64-pc-windows-gnu' : ''}"
+        "./rustup-init.sh -y --no-modify-path --default-toolchain 1.44 --profile minimal #{os == 'windows' ? '--default-host=x86_64-pc-windows-gnu' : ''}"
       ]
     ]
   }
