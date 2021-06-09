@@ -1,9 +1,9 @@
 ![Build and test the esy
 package](https://github.com/ManasJayanth/esy-packages-template/workflows/Build%20and%20test%20the%20esy%20package/badge.svg)
 
-# esy-hello
+# esy-rustup
 
-`esy-hello` is sample package, [`hello`](https://github.com/esy/test-hello-c), packaged for [`esy`](https://esy.sh/).
+`esy-rustup` is [`rustup`](https://rustup.rs), packaged for [`esy`](https://esy.sh/).
 
 ## Why
 `esy` can not only fetch and install Reason and OCaml libraries and tools,
@@ -13,22 +13,22 @@ etc. Users don't have to install them separately, nor have to worry if
 they have installed the correct version. Read more at the docs about
 [benefits for opting for esy packages](https://esy.sh#TODO).
 
-## How to use `esy-hello`?
+## How to use `esy-rustup`?
 
-`esy-hello` can be used from both NPM and directly from Github.
+`esy-rustup` can be used from both NPM and directly from Github.
 
 ### From NPM 
 
-`esy-hello` is deployed on NPM can be found
+`esy-rustup` is deployed on NPM can be found
 [here](https://www.npmjs.com/package/TODO).
 
-You can simply run `esy add esy-hello` to install it, or specify it in
+You can simply run `esy add esy-rustup` to install it, or specify it in
 `package.json` and run `esy`.
 
 ```diff
 {
   "dependencies": {
-+   "esy-hello": "*"
++   "esy-rustup": "*"
   }
 }
 ```
@@ -38,7 +38,7 @@ You can simply run `esy add esy-hello` to install it, or specify it in
 ```json
 {
   "dependencies": {
-    "esy-hello": "esy-packages/esy-hello"
+    "esy-rustup": "esy-packages/esy-rustup"
   }
 }
 ```
@@ -49,7 +49,7 @@ To use a specific commit,
 
 ```diff
   "dependencies": {
-+   "esy-hello": "esy-packages/esy-hello#<commit hash>"
++   "esy-rustup": "esy-packages/esy-rustup#<commit hash>"
   }
 ```
 
@@ -120,7 +120,7 @@ package with a `package.json` or `esy.json` depends on it.
 ```json
 {
   "dependencies": {
-    esy-hello": "*"
+    esy-rustup": "*"
   }
 }
 ```
