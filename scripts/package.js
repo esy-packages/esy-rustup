@@ -131,9 +131,14 @@ let {
 } = manifest;
 
 function tar(filePath, destDir, gzip) {
-  cp.execSync(`tar -x${gzip ? "z" : ""}f ${filePath} -C ${destDir}`, {
-    stdio: "inherit",
-  });
+  cp.execSync(
+    `tar ${process.platform == "win32" ? "--force-local" : ""} -x${
+      gzip ? "z" : ""
+    }f ${filePath} -C ${destDir}`,
+    {
+      stdio: "inherit",
+    }
+  );
 }
 
 function unzip(filePath, destDir) {
