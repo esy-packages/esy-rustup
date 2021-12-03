@@ -147,6 +147,7 @@ function unzip(filePath, destDir) {
 
 let esyPackageDir = path.join(cwd, "_esy-package");
 mkdirpSync(esyPackageDir);
+console.log("debug", "Created", esyPackageDir);
 let pkgPath = esyPackageDir;
 download(source)
   .then((pathStr) => {
