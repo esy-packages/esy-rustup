@@ -4,3 +4,4 @@ _esy
 _esy-package
 .log
 package.tar.gz
+package/

@@ -131,9 +131,14 @@ let {
 } = manifest;
 
 function tar(filePath, destDir, gzip) {
-  cp.execSync(`tar -x${gzip ? "z" : ""}f ${filePath} -C ${destDir}`, {
-    stdio: "inherit",
-  });
+  cp.execSync(
+    `tar ${process.platform == "win32" ? "--force-local" : ""} -x${
+      gzip ? "z" : ""
+    }f ${filePath} -C ${destDir}`,
+    {
+      stdio: "inherit",
+    }
+  );
 }
 
 function unzip(filePath, destDir) {
@@ -142,6 +147,7 @@ function unzip(filePath, destDir) {
 
 let esyPackageDir = path.join(cwd, "_esy-package");
 mkdirpSync(esyPackageDir);
+console.log("debug", "Created", esyPackageDir);
 let pkgPath = esyPackageDir;
 download(source)
   .then((pathStr) => {
