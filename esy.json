@@ -20,12 +20,6 @@
         "scope": "global"
       }
     },
-    "build": [
-      [
-        "sh",
-        "-c",
-        "./rustup-init.sh -y --no-modify-path --default-toolchain 1.51 --profile minimal #{os == 'windows' ? '--default-host=x86_64-pc-windows-gnu' : ''}"
-      ]
-    ]
+    "build": "#{os == 'windows' ? './rustup-init.exe -y --no-modify-path --default-toolchain 1.51 --profile minimal --default-host=x86_64-pc-windows-gnu': './rustup-init.sh -y --no-modify-path --default-toolchain 1.51 --profile minimal'}"
   }
 }
