@@ -1,7 +1,7 @@
 {
   "name": "esy-rustup",
   "//": "The version is the rust version",
-  "version": "1.51.1",
+  "version": "1.52.1",
   "description": "Rust toolchain setup for esy",
   "source": "https://github.com/rust-lang/rustup/archive/refs/tags/1.24.2.tar.gz#979e8139734d39313b0147e0db3bfd2675f49507",
   "override": {
@@ -25,7 +25,7 @@
       [
         "sh",
         "-c",
-        "./rustup-init.sh -y --no-modify-path --default-toolchain 1.51 --profile minimal #{os == 'windows' ? '--default-host=x86_64-pc-windows-gnu' : ''}"
+        "./rustup-init.sh -y --no-modify-path --default-toolchain 1.52 --profile minimal #{os == 'windows' ? '--default-host=x86_64-pc-windows-gnu' : ''}"
       ]
     ],
     "install": [
